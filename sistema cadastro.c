@@ -22,6 +22,12 @@ int s,n;
 
 int main (void){
 
+/* definicao do ponteiro para o arquivo */
+FILE *Ponteiro;
+Ponteiro = fopen("arquivo.txt", "a");
+fclose(Ponteiro);
+return 0;
+
 	struct referencia{
 
 	 char nome0[100],nome1[100],nome2[100],nome3[100],nome4[100];
@@ -147,27 +153,27 @@ CA[600];
                 printf("\nDigite 1 para pesquisar por CPF ou 2 para pesquisar por email:   ");
                 scanf("%d", &op);
                  switch(op){
-                    case 1:
-                       printf("\nDigite o CPF:  ");
-                       scanf("&d", &cpfPesquisa);
-                       for(i=0;i<SIZE;i++){
-                       if(strcmp(cpf[i], cpfPesquisa)){
-                        printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
-                         }
+                        case 1:
+                           printf("\nDigite o CPF:  ");
+                           scanf("&d", &cpfPesquisa);
+                           for(i=0;i<SIZE;i++){
+                           if(strcmp(cpf[i], cpfPesquisa)){
+                            printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
+                             }
+                            }
+                        case 2:
+                            printf("\nDigite o Email:  ");
+                            scanf("%s", &emailPesquisa);
+                            for(i=0;i<SIZE;i++){
+                            if(strcmp(email[i], emailPesquisa)==0){}
+                            printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
+                            }
                         }
-                case 2:
-                    printf("\nDigite o Email:  ");
-                    scanf("%s", &emailPesquisa);
-                    for(i=0;i<SIZE;i++){
-                    if(strcmp(email[i], emailPesquisa)==0){}
-                    printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
-                    }
-                }
-                        for(i=1;i<=quant;i++){
-						 	system("cls");
-						 	memset(linha,0,sizeof(linha));
-						 	printf("Ficha Excluido!");
-						 	system("pause");
+                                for(i=1;i<=quant;i++){
+                                    system("cls");
+                                    memset(linha,0,sizeof(linha));
+                                    printf("Ficha Excluida!");
+                                    system("pause");
               }
             }
           }
@@ -175,4 +181,3 @@ CA[600];
 system("pause");
 return 0;
 }
-
