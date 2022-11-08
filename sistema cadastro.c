@@ -177,7 +177,7 @@ CA[600];
                		system("cls");
                      printf("\n\n\t\t\tDADOS DO SISTEMA \n");
                 printf("--------------------------------------------------------------------\n");
-                printf("\nFEITO POR ROBERT DE S. MAIO \nFEITO PELO CODE::BLOCKS \n\n");
+                printf("\nFEITO POR ROBERT DE S. MAIO \nFEITO PELO CODE::BLOCKS \n\n-------------------------------------------------------------------- \nME SIGA PARA VER MEUS PROJETOS \n[LINKEDIN=https://www.linkedin.com/in/robert-s-maio-62b38019a/] \n[GITHUB=https://github.com/RobertSMaio] \n[PORTFOLIO=https://portfolio-maio.netlify.app/] \n\n");
 				printf("--------------------------------------------------------------------\n\n");	
                  printf("\nDigite 1 para continuar pesquisando  ");
                           scanf("%d", &op);
