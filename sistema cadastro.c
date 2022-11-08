@@ -20,13 +20,8 @@ int i;
 int op, opcao, opcao1, opcao2, opcao3, opcao4, opcao5, i, quant;
 int s,n;
 
-int main (void){
 
-/* definicao do ponteiro para o arquivo */
-FILE *Ponteiro;
-Ponteiro = fopen("arquivo.txt", "a");
-fclose(Ponteiro);
-return 0;
+int main (void){
 
 	struct referencia{
 
@@ -72,7 +67,7 @@ CA[600];
         switch(opcao){
 	 		case 1:
 	 			system("cls");
-	 			printf("\n\nQuantos cadastros voce deseja realizar? \ndigite 0 para retornar ");
+	 			printf("\n\nQuantos cadastros voce deseja realizar? \n");
 	 			scanf("%d", &quant);
             for(i=1;i<=quant;i++){
                     system("cls");
@@ -92,19 +87,19 @@ CA[600];
         scanf("%d", &cep[linha]);
         printf("\nQual a idade? ");
         scanf("%d", &idade[linha]);
-        if(idade >= 6,idade <= 60){
-            printf("\nEste paciente e grupo de risco %s\n", &risco);
+        if(idade <= 6,idade >= 60){
+            printf("\nEste paciente e grupo de risco \n");
         }
         printf("A pessoa tem alguma comorbidade? s/n:   \n");
         scanf("%s", &comorbidade);
                 if(comorbidade == s){
-                    printf("\nEste paciente e grupo de risco!!%s\n", &risco);
+                    printf("\nEste paciente e grupo de risco!!\n");
                     printf("\nDigite a comorbidade: ");
                     scanf("%s", &comorbidade[linha]);
                 }else(comorbidade == n);{
                     printf("\nEste paciente nao e grupo de risco\n");
             }
-            printf("\nEste paciente e grupo de risco?  \n");
+            printf("\nEste paciente esta em alguem grupo de risco? s/n  \n");
             scanf("%s", &risco[linha]);
                 if(risco == s){
                     printf("\nManter afastado de zona critica\n");
@@ -129,22 +124,24 @@ CA[600];
                        printf("\nDigite o CPF:  ");
                        scanf("&d", &cpfPesquisa);
                        for(i=0;i<SIZE;i++){
-                       if(cpf[i]>0, cpfPesquisa){
+                       if(strcmp(cpf[i]>0, cpfPesquisa)==1){
                         printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
                        }
                       }
+                      printf("\nDigite 1 para continuar pesquisando  ");
+                          scanf("%d", &op);
+                          system("pause");
                     case 2:
                         printf("\nDigite o email:  ");
                         scanf("%s", &emailPesquisa);
                         for(i=0;i<SIZE;i++){
-                        if(strcmp(email[i], emailPesquisa)==0){}
+                        if(strcmp(email[i], emailPesquisa)==1){}
                         printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
                         }
                     }
                           printf("\nDigite 1 para continuar pesquisando  ");
                           scanf("%d", &op);
                           system("pause");
-              }
               break;
                     case 3:
                     system("cls");
@@ -157,7 +154,7 @@ CA[600];
                            printf("\nDigite o CPF:  ");
                            scanf("&d", &cpfPesquisa);
                            for(i=0;i<SIZE;i++){
-                           if(strcmp(cpf[i], cpfPesquisa)){
+                           if(cpf[i], cpfPesquisa){
                             printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
                              }
                             }
@@ -165,19 +162,37 @@ CA[600];
                             printf("\nDigite o Email:  ");
                             scanf("%s", &emailPesquisa);
                             for(i=0;i<SIZE;i++){
-                            if(strcmp(email[i], emailPesquisa)==0){}
+                            if(strcmp(email[i], emailPesquisa)==1){}
                             printf("\nNome: %s \nEmail: %s \nCPF: %d \nTelefone: %d \nEndereco: %s \nCep: %d \nIdade: %d \nComorbidade: %s", nome[i], email[i], cpf[i], telefone[i], endereco[i], cep[i], idade[i], comorbidade[i]);
                             }
-                        }
                                 for(i=1;i<=quant;i++){
                                     system("cls");
                                     memset(linha,0,sizeof(linha));
                                     printf("Ficha Excluida!");
                                     system("pause");
+                                }
+               }
+               break;
+               		case 4:
+               		system("cls");
+                     printf("\n\n\t\t\tDADOS DO SISTEMA \n");
+                printf("--------------------------------------------------------------------\n");
+                printf("\nFEITO POR ROBERT DE S. MAIO \nFEITO PELO CODE::BLOCKS \n\n");
+				printf("--------------------------------------------------------------------\n\n");	
+                 printf("\nDigite 1 para continuar pesquisando  ");
+                          scanf("%d", &op);
+                          system("pause");
+						  break;
+                    case 5:
+                    	system("cls");
+                     printf("\n\n\t\t\tATE A PROXIMA \n");
+                printf("--------------------------------------------------------------------\n\n");
+                printf("\nDigite 1 para sair  ");
+                          scanf("%d", &op);
+                          system("pause");
+                          return 0;
               }
             }
           }
-        }
-system("pause");
-return 0;
+        }	
 }
